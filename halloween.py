@@ -17,6 +17,19 @@ def chase(color):
         time.sleep(0.1)
         count = (count + 1) % 3
         
+    """
+    Sets a count to 0 then goes into a for loop for np.n times. Then it'll set the neopixels to
+    the color parameter. Then the funtion goes into another for loop np.n times where it'll set
+    every 3rd neopixel to black so it'll create a chasing effect.
+    
+    Args:
+        color(tuple): The RGB value.
+    
+    Shows
+        The colors being chased to the left.
+    
+    """
+        
 def fade_out(color, speed = 0.005):
     red_value = color[0]
     green_value = color[1]
@@ -33,6 +46,9 @@ def fade_out(color, speed = 0.005):
         np.fill((red, green, blue))
         np.show()
         time.sleep(speed)
+    """
+
+    """
 
     
 def fade_in(color, speed = 0.005):
@@ -61,18 +77,45 @@ def fire(pcolor, color1, color2):
         np.show()
         time.sleep(random.randint(1,5) / 1000)
         
+    """
+    Sets the neoPixels to the pcolor. Then goes into a for loop for half of the neopixel's
+    length. Inside the for loop, it'll set set a random neopixel with the range for np[0] -
+    np[np.n-1] to color1. It will then do the same randomization for color2. It will then show
+    and sleep for a very short randomized period of time from 0.001 - 0.005 of a second.
+    
+    Arg:
+        pcolor (tuple): The base color
+        color1(tuple): The first random color
+        color2(tuple): The second random color
+        
+    Shows:
+        The neopixels will look like fire against another surface.
+    
+    """
+        
 def lightning(color):
     for i in range(random.randint(1, 5)):
-        stop = (random.randint(1,5) / 100)
-        time.sleep(stop)
+        time.sleep(random.randint(1,5) / 100)
         np.fill((255, 255, 255))
         np.show()
-        time.sleep(stop)
+        time.sleep(random.randint(1,5) / 100)
         np.fill(color)
         np.show()
-    np.fill(color)
-    np.show()
     time.sleep(2)
+    
+    """
+    Goes into a for loop for a random amount of 1 - 5. Then the function will sleep for a
+    randomized time between 0.01 and 0.05. After the sleep period is up the neopixels will flash
+    white (255, 255, 255) and sleep for the same randomized time. After that sleep period it
+    flashes set the neopixels to color. After the for loop it'll sleep for 2 seconds.
+    
+    Args:
+        color(tuple): The base color of the neopixels
+        
+    Shows:
+        Makes the neopixels looks like it's flashing lightning
+    
+    """
 
 
 def sparkle(background, foreground, t, num):
@@ -81,6 +124,17 @@ def sparkle(background, foreground, t, num):
         np[random.randint(0, np.n - 1)] = foreground
         np.show()
         time.sleep(t)
+    
+    """
+    Args:
+        background(tuple): The base color
+        foreground(tuple): The color that's randomized flashes
+        t(double): The amount for sleep inbetween each loop
+        num(int): The number of times the loop will run
+        
+    Shows:
+        
+    """
 
         
 while True:
@@ -94,7 +148,6 @@ while True:
     fade_in((8, 84, 13))
     for i in range(3):
         chase((8, 84, 13))
-    fade_out((125, 0, 225))
+    fade_out((8, 84, 13))
     time.sleep(0.5)
-    for i in range(10):
-        sparkle((0,0,0), (255, 0, 0), 0.05, 15)
+    fade_in((230, 115, 0))
