@@ -67,6 +67,16 @@ def fade_in(color, speed = 0.005):
         np.fill((red, green, blue))
         np.show()
         time.sleep(speed)
+    
+    """
+    
+    Args:
+        color(tuple):
+        speed(double): ... if user does not input a speed it is automatically set to 0.005.
+        
+    Shows:
+        Shows the color fading in
+    """
         
 def fire(pcolor, color1, color2):
     np.fill(pcolor)
@@ -94,7 +104,7 @@ def fire(pcolor, color1, color2):
     """
         
 def lightning(color):
-    for i in range(random.randint(1, 5)):
+    for i in range(random.randint(2, 10)):
         time.sleep(random.randint(1,5) / 100)
         np.fill((255, 255, 255))
         np.show()
@@ -104,7 +114,7 @@ def lightning(color):
     time.sleep(2)
     
     """
-    Goes into a for loop for a random amount of 1 - 5. Then the function will sleep for a
+    Goes into a for loop for a random amount of 2 - 10. Then the function will sleep for a
     randomized time between 0.01 and 0.05. After the sleep period is up the neopixels will flash
     white (255, 255, 255) and sleep for the same randomized time. After that sleep period it
     flashes set the neopixels to color. After the for loop it'll sleep for 2 seconds.
@@ -126,6 +136,11 @@ def sparkle(background, foreground, t, num):
         time.sleep(t)
     
     """
+    When the function is called, it sets the fill of the neopixels to the background. Then it'll
+    go into a loop for num amount of times. In the loop it'll set a random neopixel from np[0] to
+     np[np.n-1] to the foreground color. After, it'll show the background with the randomized
+    foreground neopixel, then time.sleep() for however long t is and will repeat the process.
+
     Args:
         background(tuple): The base color
         foreground(tuple): The color that's randomized flashes
@@ -133,7 +148,7 @@ def sparkle(background, foreground, t, num):
         num(int): The number of times the loop will run
         
     Shows:
-        
+        A sparkling effect with the foreground as the sparkle
     """
 
         
