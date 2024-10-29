@@ -46,8 +46,19 @@ def fade_out(color, speed = 0.005):
         np.fill((red, green, blue))
         np.show()
         time.sleep(speed)
-    """
-
+   """
+    Since color is a tuple the first value is set to red_value, second to green_value, and the
+    third is set to blue_value. While the ratios is set to the red, green, and blue values
+    divided by 50. In the for loop it goes for 51 times updating and assigning the values of red,
+    green, and blue, to their repective values minus i times there repective ratios.
+    
+    Args:
+        color(tuple): The set color that'll fade out.
+        speed(double): How fast the light will fade out. If user does not input a speed it is
+        automatically set to 0.005.
+        
+   Returns:
+       nothing
     """
 
     
