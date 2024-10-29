@@ -25,8 +25,8 @@ def chase(color):
     Args:
         color(tuple): The RGB value.
     
-    Shows
-        The colors being chased to the left.
+    Returns:
+        nothing
     
     """
         
@@ -74,8 +74,8 @@ def fade_in(color, speed = 0.005):
         color(tuple):
         speed(double): ... if user does not input a speed it is automatically set to 0.005.
         
-    Shows:
-        Shows the color fading in
+    Returns:
+        nothing
     """
         
 def fire(pcolor, color1, color2):
@@ -98,8 +98,8 @@ def fire(pcolor, color1, color2):
         color1(tuple): The first random color
         color2(tuple): The second random color
         
-    Shows:
-        The neopixels will look like fire against another surface.
+    Returns:
+        nothing
     
     """
         
@@ -122,8 +122,8 @@ def lightning(color):
     Args:
         color(tuple): The base color of the neopixels
         
-    Shows:
-        Makes the neopixels looks like it's flashing lightning
+    Returns:
+        nothing
     
     """
 
@@ -147,8 +147,8 @@ def sparkle(background, foreground, t, num):
         t(double): The amount for sleep inbetween each loop
         num(int): The number of times the loop will run
         
-    Shows:
-        A sparkling effect with the foreground as the sparkle
+    Returns:
+        nothing
     """
 
         
